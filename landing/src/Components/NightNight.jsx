@@ -8,9 +8,10 @@ const Sleep = styled.div`
   background: #000;
   font-family: Arial, sans-serif;
   color: #fff;
-  font-size: 12px;
+  font-size: 17px;
   padding: 10%;
   position: fixed;
+  text-align: center;
   margin: 0;
   top: 0;
   left: 0;
