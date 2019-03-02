@@ -31,8 +31,8 @@ export default (props) => {
 								<MDBBtn
 									outline
 									color='white'
-									href='https://github.com/maks112v/nightnight'>
-									Get Started
+									href='https://www.npmjs.com/package/night-night'>
+									Get Started with NPM
 								</MDBBtn>
 								
 							</div>

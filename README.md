@@ -10,6 +10,7 @@
 
 ```bash
 npm install --save night-night
+yarn add night-night
 ```
 
 ## Usage

@@ -15,9 +15,11 @@ const HowTo = () => {
 						How to install night night
 					</h2>
 					<p className='grey-text w-responsive text-center mx-auto '>
-						You can install night night by placing this single line of code just above the tag on an html page. And that’s it! We’ll do the rest.
+						You can install night night by installing a single NPM package. And that’s it! We’ll do the rest.
 					</p>
-					<MDBBtn color="primary" className="text-center">Get Started</MDBBtn>
+					<MDBBtn color="primary" className="text-center" href="https://www.npmjs.com/package/night-night">Get Started</MDBBtn>
+					<br/>
+					<code>npm install --save night-night</code>
 				</MDBCol>
 			</MDBRow>
 			<MDBRow>
