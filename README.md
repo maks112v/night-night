@@ -3,7 +3,7 @@
 # night-night - Make your website sleep at night
 
 ----
-# [See Demo Here](https://nightnight.maksv.me/)'
+# [See Demo Here](https://nightnight.maksv.me/)
 ----
 
 > Night Night is a simple program that allows you to put your website to sleep at bedtime, encouraging your users to go to bed, better supporting their health, wellbeing, and happiness.
