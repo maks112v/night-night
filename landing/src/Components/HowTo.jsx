@@ -38,9 +38,7 @@ const HowTo = () => {
 						<MDBCol md='11' size='10'>
 							<h5 className='font-weight-bold mb-3'>How can I change the sleep and wake time?</h5>
 							<p className='grey-text'>
-								Lorem ipsum dolor sit amet, consectetur adipisicing.
-								Reprehenderit maiores nam, aperiam minima elit assumenda
-								voluptate velit.
+								Just change the props being passed down and night night will listen to that time. 
 							</p>
 						</MDBCol>
 					</MDBRow>
