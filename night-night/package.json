@@ -59,8 +59,15 @@
     "dist"
   ],
   "dependencies": {
-    "mdbreact": "^4.11.0",
-    "react-toastify": "^4.5.2",
     "styled-components": "^4.1.3"
-  }
+  },
+  "keywords": [
+    "bedtime",
+    "digital",
+    "health",
+    "lambda",
+    "night",
+    "sleep",
+    "wellbeing"
+  ]
 }
