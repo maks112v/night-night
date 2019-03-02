@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Components/Header';
-import Features from './Components/Features';
-import { MDBContainer } from 'mdbreact';
-import HowTo from './Components/HowTo';
-import Footer from './Components/Footer';
-import Contribute from './Components/Contribute';
+
+import Home from './Home';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
@@ -29,13 +26,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Header enableDemo={this.toggle} />
-      <MDBContainer>
-        <Features />
-        <HowTo />
-        <Contribute />
-      </MDBContainer>
-      <Footer />
+      <Home toggle={this.toggle} />
       <NightNight day={6} dayMin={0} night={22} nightMin={0} expireTime={1} demoState={this.state.demo} disableDemo={this.toggle} /> 
       </div>
     );
