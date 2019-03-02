@@ -30,8 +30,7 @@ class App extends Component {
         <HowTo />
       </MDBContainer>
       <Footer />
-      <NightNight day={6} dayMin={0} night={22} nightMin={0} expireTime={1} demoState={this.state.demo} disableDemo={this.toggle} />  />
-      {/* <NightNight day='06' dayMin='0' night='22' nightMin='0' showToast={true} demoState={this.state.demo} disableDemo={this.toggle} /> */}
+      <NightNight day={6} dayMin={0} night={22} nightMin={0} expireTime={1} demoState={this.state.demo} disableDemo={this.toggle} /> 
       </div>
     );
   }

@@ -20,7 +20,7 @@ export default (props) => {
 								<h1 className='h1-responsive font-weight-bold mt-sm-5'>
 									Night Night{" "}
 								</h1>
-								<hr className='hr-light' />
+								<hr className='hr-light'/>
 								<h6 className='mb-4'>
 									Do your part to improve world health by putting your website
 									to sleep
@@ -40,8 +40,7 @@ export default (props) => {
 								<img
 									src='/leading.png'
 									alt=''
-									className='img-fluid'
-								/>
+									className='img-fluid'/>
 							</MDBCol>
 						</MDBRow>
 					</MDBContainer>
