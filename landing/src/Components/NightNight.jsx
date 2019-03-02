@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import { ToastContainer, toast } from 'react-toastify';
 import {MDBBtn} from 'mdbreact';
 
-import 'react-toastify/dist/ReactToastify.css';
-
-import './Night.css';
+import './Night.css'
 
 const Sleep = styled.div`
   background: #000;
@@ -40,31 +37,45 @@ const NightSkip = styled.button`
   cursor: pointer;
 `;
 
-class NightNight extends Component {
+export default class NightNight extends Component {
   constructor(props){
     super(props);
     let d = new Date();
+    let enabled = true;
+    if(JSON.parse(localStorage.getItem('enabledNightNight')) === false){
+      let now = new Date().getTime();
+      let expTime = JSON.parse(localStorage.getItem('expNightNight'));
+      if(now > expTime){
+        localStorage.clear();
+      }
+      else{
+        enabled = JSON.parse(localStorage.getItem('enabledNightNight'));
+      }
+    }
     this.state = {
-      disabled: (localStorage.getItem('disableNightNight') === null) ? false : true,
+      enabled,
       current: d.getHours() * 60 + d.getMinutes(),
       night: Number(props.night) * 60 + Number(props.nightMin),
       day: Number(props.day) * 60 + Number(props.dayMin),
       showToast: props.showToast,
+      expireTime: props.expireTime,
+      d
     }
     if(this.state.day > this.state.night){
       console.error("WARNING: NightNight: invalid time interval: sleep time is earlier in the day than wakeup time");
     }
   }
 
-  disableNight = () => {
+  toggle = () => {
     this.setState({
-      disabled: !this.state.disabled,
+      enabled: !this.state.enabled,
     })
-    this.updateLocal();
-  }
-
-  updateLocal = () => {
-    localStorage.setItem('disableNightNight', this.state.disabled);
+    localStorage.setItem('enabledNightNight', JSON.stringify(false));
+    if(this.state.expireTime !== undefined){
+      let now = new Date().getTime();
+      now = now + Number(this.state.expireTime)*60*60*1000;
+      localStorage.setItem('expNightNight', now);
+    }
   }
 
   render(){
@@ -72,7 +83,7 @@ class NightNight extends Component {
     let suffix = this.props.day < 12 ? "AM" : "PM";
     let time = (this.props.day % 13) + ":" + ("0"+ this.props.dayMin).slice(-2) + " " + suffix;
     if(this.props.demoState){
-      return(
+      return (
         <Sleep className="animated fadeIn">
           <div>It&rsquo;s late&hellip;</div>
           <div>Nothing we can offer you is more important than your sleep.</div>
@@ -80,31 +91,21 @@ class NightNight extends Component {
           <WakeUp>This site will wake up at {time}</WakeUp>
           <NightSkip onClick={this.props.disableDemo}>I&rsquo;ll sleep later, I really need to use this site right now.</NightSkip>
           <br/>
-          <MDBBtn outline color="primary" onClick={this.props.disableDemo} className="mt-5">Disable Demo</MDBBtn>
+          <MDBBtn outline color="primary" onClick={this.props.disableDemo} className="mt-5">Close Demo</MDBBtn>
         </Sleep>
       );
     }
-    if(this.state.disabled === false && isNight){
+    if(this.state.enabled && isNight){
       return (
         <Sleep className="animated fadeIn">
           <div>It&rsquo;s late&hellip;</div>
           <div>Nothing we can offer you is more important than your sleep.</div>
           <div>Sleep well, sweet dreams, and we will catch you in the morning.</div>
           <WakeUp>This site will wake up at {time}</WakeUp>
-          <NightSkip onClick={this.disableNight}>I&rsquo;ll sleep later, I really need to use this site right now.</NightSkip>
+          <NightSkip onClick={this.toggle}>I&rsquo;ll sleep later, I really need to use this site right now.</NightSkip>
         </Sleep>
       );
-    }
-    else{
-      if( isNight && this.state.showToast){
-        toast.warn('Night Night is Disabled. Enable?', { position: "bottom-center", autoClose: 5000, closeButton: false, closeOnClick: false, pauseOnHover: true });
-        return (
-          <div onClick={this.disableNight}><ToastContainer /></div>
-        )
-      }
     }
     return(null);
   }
 }
-
-export default NightNight;

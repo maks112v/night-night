@@ -38,7 +38,7 @@ export default (props) => {
 							</div>
 							<MDBCol md='6' xl='5' className='mt-xl-5'>
 								<img
-									src='https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png'
+									src='/leading.png'
 									alt=''
 									className='img-fluid'
 								/>
