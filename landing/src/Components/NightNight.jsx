@@ -31,7 +31,7 @@ const NightSkip = styled.button`
   font-size: 14px;
   margin-top: 40px;
   background:none!important;
-  color:inherit;
+  color: #2196F3;
   border:none; 
   padding:0!important;
   font: inherit;

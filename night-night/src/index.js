@@ -8,9 +8,10 @@ const Sleep = styled.div`
   background: #000;
   font-family: Arial, sans-serif;
   color: #fff;
-  font-size: 12px;
+  font-size: 17px;
   padding: 10%;
   position: fixed;
+  text-align: center;
   margin: 0;
   top: 0;
   left: 0;
@@ -30,7 +31,7 @@ const NightSkip = styled.button`
   font-size: 14px;
   margin-top: 40px;
   background:none!important;
-  color:inherit;
+  color: #2196F3;
   border:none; 
   padding:0!important;
   font: inherit;
