@@ -36,7 +36,7 @@ class Example extends Component {
 - dayMin = Start of day min (1-60)
 - night = Start of day hour (1-23)
 - nightMin = Start of day min (1-60)
-- expireTime = Amount of time until Night is disabled for when user continues to site.
+- expireTime = Amount of time(In Hours) until Night is disabled for when user continues to site.
 
 ## License
 
