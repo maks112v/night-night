@@ -1,6 +1,6 @@
 {
   "name": "night-night",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Night Night is a simple program that allows you to put your website to sleep at bedtime, encouraging your users to go to bed, better supporting their health, wellbeing, and happiness.",
   "author": "maks112v",
   "license": "MIT",
@@ -64,10 +64,18 @@
   "keywords": [
     "bedtime",
     "digital",
+    "easter",
+    "easter-egg",
+    "easy",
+    "egg",
     "health",
+    "improve",
     "lambda",
     "night",
+    "responsibility",
     "sleep",
-    "wellbeing"
+    "universal",
+    "wellbeing",
+    "world"
   ]
 }
