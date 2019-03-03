@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./Components/Home/Header";
 import Features from "./Components/Home/Features";
 import { MDBContainer } from "mdbreact";
