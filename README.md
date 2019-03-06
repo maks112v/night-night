@@ -2,8 +2,9 @@
 
 # night-night - Make your website sleep at night
 ----
- Night Night is a simple program that allows you to put your website to sleep at bedtime, encouraging your users to go to bed, better supporting their health, wellbeing, and happiness.
- # [See Demo](https://nightnight.maksv.me/)
+Night Night is a simple program that allows you to put your website to sleep at bedtime, encouraging your users to go to bed, better supporting their health, wellbeing, and happiness.
+
+# [See Demo](https://nightnight.maksv.me/)
 
 [![NPM](https://img.shields.io/npm/v/night-night.svg)](https://www.npmjs.com/package/night-night) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![Code Size](https://img.shields.io/github/languages/code-size/maks112v/night-night.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/71e7fd2159464413b839cd75d6813c4e)](https://www.codacy.com/app/maks112v/night-night?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=maks112v/night-night&amp;utm_campaign=Badge_Grade)
 
@@ -30,10 +31,10 @@ class Example extends Component {
 }
 ```
 ## Variables
-- day = Start of day hour (1-23)
-- dayMin = Start of day min (1-60)
-- night = Start of day hour (1-23)
-- nightMin = Start of day min (1-60)
+- day = Start of day hour (0-23)
+- dayMin = Start of day min (0-60)
+- night = Start of day hour (0-23)
+- nightMin = Start of day min (0-60)
 - expireTime = Amount of time until Night is disabled (In Hours) for when user continues to site.
 
 ## Contribute To Our Project
@@ -47,6 +48,25 @@ Help us make everyones life a little bit better and add this to your website. Al
     - If you don't know react js add your changes to the js file in src and we will port it over to our npm package.
 
 # [Read More](https://nightnight.maksv.me/)
+
+## Versions
+- 1.0.0 - 1.0.4
+  - Development
+  - Added Main Feature Set
+  - Added Save Feature
+- 1.0.5
+  - Added tags
+  - Centered Text
+  - Added Accent Color
+  - Updated Read Me 
+  - Bug Fixes
+- 1.0.6
+  - Updated Read Me File
+  - Minor Style Updates
+  - Changed Font to Poppins
+- 1.0.7 (In Development)
+  - Adding Particals with Partical JS
+  - Added Multiple Themes
 
 ## License
 
