@@ -6,7 +6,7 @@ import './Night.css'
 
 const Sleep = styled.div`
   background: #000;
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   color: #fff;
   font-size: 17px;
   padding: 10%;
@@ -29,7 +29,7 @@ const WakeUp = styled.div`
 const NightSkip = styled.button`
   font-style: italic;
   font-size: 14px;
-  margin-top: 40px;
+  margin-top: 30px;
   background:none!important;
   color: #2196F3;
   border:none; 
